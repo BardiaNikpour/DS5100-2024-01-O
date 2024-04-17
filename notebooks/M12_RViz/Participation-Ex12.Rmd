@@ -1,0 +1,101 @@
+---
+title: "Participation-Ex12"
+author: "Bardia Nikpour"
+date: "2024-04-16"
+output: pdf_document
+---
+
+
+
+## Ex.1
+```{r}
+library(vctrs)
+library(tidyverse)
+
+```
+
+```{r}
+head(mpg)
+
+```
+## Ex.1
+```{r}
+mpg %>% ggplot()
+```
+## Ex.2
+```{r}
+mpg %>%
+ggplot (aes (x = cyl, y = hwy)) +
+geom_point ( )
+```
+
+## Ex.3
+```{r}
+mpg %>%
+ggplot(aes (x = class, y = drv)) +
+geom_point ( )
+```
+
+
+## Ex.4
+```{r}
+x <- seq(-6*pi, 6*pi, length.out = 100)
+dat <- data.frame (x = x, y = sin(x) /x)
+head (dat)
+```
+```{r}
+ggplot(data = dat,
+  mapping = aes(x=x, y=y)) +
+  geom_line()
+```
+
+## Ex.5
+```{r}
+cars %>%
+ggplot(aes (x = speed, y = dist)) +
+geom_point( )
+```
+
+## Ex.6
+```{r}
+
+```
+
+## Ex.7
+```{r}
+cars %>%
+  ggplot(aes(speed, dist)) +
+  geom_point(color = ifelse(cars$dist > 80, 'red', 'blue'))
+```
+
+## Ex.8
+```{r}
+
+```
+
+## Ex.9
+```{r}
+cars %>%
+  ggplot(aes(x= speed)) +
+  geom_histogram(bins = 10)
+```
+```{r}
+cars %>%
+  ggplot(aes(x= dist)) +
+  geom_histogram(bins = 10)
+```
+## Ex.10
+```{r}
+
+```
+
+
+
+
+
+
+
+
+
+
+
